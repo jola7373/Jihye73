@@ -1,0 +1,102 @@
+package hw0;
+/*
+ * Jihye Hong
+ * CIS35A
+ * Assignment 0-1
+ * Due Date: 15.01.2019
+ * Date submitted: 15.01.2019
+ */
+import java.util.Scanner;
+import java.util.Formatter;
+
+public class PART1 {
+	public static void main(String[]args) {
+		
+		//price of each item
+		final double TV_price = 400.00;
+		final double VCR_price = 220.00;
+		final double remote_price = 35.20;//remote controller
+		final double CD_price = 300.00;
+		final double tape_price = 150.00;//tape recorder
+		final double tax = 8.25;
+		
+		//getting numbers of each item
+		Scanner sc = new Scanner(System.in);
+		System.out.println("How many TV's were sold?");
+		int TV_num = sc.nextInt();
+		System.out.println("How many VCR's were sold?");
+		int VCR_num = sc.nextInt();
+		System.out.println("How many remote controller's were sold?");
+		int remote_num = sc.nextInt();
+		System.out.println("How many CD's were sold?");
+		int CD_num = sc.nextInt();
+		System.out.println("How many tape recorder's were sold?");
+		int tape_num = sc.nextInt();
+		sc.close();
+		
+		//total price of each item and subtotal, tax, and total price
+		double TV_total = TV_price * TV_num;
+		double VCR_total = VCR_price * VCR_num;
+		double remote_total = remote_price * remote_num;
+		double CD_total = CD_price *CD_num;
+		double tape_total = tape_price * tape_num;
+		double subtotal = TV_total + VCR_total + remote_total + CD_total + tape_total;
+		double tax_total = subtotal * tax;
+		double total = subtotal + tax_total;
+		
+		//print out the output
+		System.out.printf("%-10s%-20s%-20s%-20s\n","QTY","Description","Unit Price","Total price");
+		System.out.printf("%-10d%-20s%-20.2f%-20.2f\n", TV_num, "TV", TV_price, TV_total);
+		System.out.printf("%-10d%-20s%-20.2f%-20.2f\n", VCR_num, "VCR", VCR_price, VCR_total);
+		System.out.printf("%-10d%-20s%-20.2f%-20.2f\n", remote_num,
+				"remote controller", remote_price, remote_total);
+		System.out.printf("%-10d%-20s%-20.2f%-20.2f\n", CD_num, "CD", CD_price, CD_total);
+		System.out.printf("%-10d%-20s%-20.2f%-20.2f\n", tape_num,
+				"tape recorder", tape_price, tape_total);
+		System.out.printf("%s : %.2f%n", "SUBTOTAL", subtotal);
+		System.out.printf("%s : %.2f%n", "TAX", tax);
+		System.out.printf("%s : %.2f%n", "TOTAL",total);
+	}
+}
+/*
+ *How many TV's were sold?
+2
+How many VCR's were sold?
+1
+How many remote controller's were sold?
+4
+How many CD's were sold?
+1
+How many tape recorder's were sold?
+2
+QTY       Description         Unit Price          Total price         
+2         TV                  400.00              800.00              
+1         VCR                 220.00              220.00              
+4         remote controller   35.20               140.80              
+1         CD                  300.00              300.00              
+2         tape recorder       150.00              300.00              
+SUBTOTAL : 1760.80
+TAX : 8.25
+TOTAL : 16287.40
+
+ * Output2
+How many TV's were sold?
+3
+How many VCR's were sold?
+0
+How many remote controller's were sold?
+2
+How many CD's were sold?
+0
+How many tape recorder's were sold?
+21
+QTY       Description         Unit Price          Total price         
+3         TV                  400.00              1200.00             
+0         VCR                 220.00              0.00                
+2         remote controller   35.20               70.40               
+0         CD                  300.00              0.00                
+21        tape recorder       150.00              3150.00             
+SUBTOTAL : 4420.40
+TAX : 8.25
+TOTAL : 40888.70
+ */
