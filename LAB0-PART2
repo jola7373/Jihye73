@@ -1,0 +1,58 @@
+package hw0;
+/*
+ * Jihye Hong 
+ * CIS 35A
+ * Assignment 0-2
+ * Due Date: 15.01.2019
+ * Date Submitted: 15.01.2019 
+ */
+
+import java.util.Scanner;
+
+public class PART2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the temperature in Celsius");
+		double C = sc.nextDouble();
+		double C_to_F = 32 + C * (180.0/100.0);
+		System.out.printf("%s %.2f%n","The temperature in Fahrenheit is ", C_to_F);
+		System.out.println("Enter the temperature in Fahrenheit");
+		double F = sc.nextDouble();
+		double F_to_C = (F-32)/(180.0/100.0);
+		System.out.printf("%s %.2f%n","The temperature in Celsius is ", F_to_C);
+		
+	}
+}
+/*
+ *Output1
+Enter the temperature in Celsius
+5
+The temperature in Fahrenheit is  41.00
+Enter the temperature in Fahrenheit
+9
+The temperature in Celsius is  -12.78
+ *Output2
+Enter the temperature in Celsius
+-5
+The temperature in Fahrenheit is  23.00
+Enter the temperature in Fahrenheit
+89
+The temperature in Celsius is  31.67
+ *Output3
+Enter the temperature in Celsius
+85
+The temperature in Fahrenheit is  185.00
+Enter the temperature in Fahrenheit
+-5
+The temperature in Celsius is  -20.56
+
+ *Output4
+Enter the temperature in Celsius
+-8
+The temperature in Fahrenheit is  17.60
+Enter the temperature in Fahrenheit
+-95
+The temperature in Celsius is  -70.56
+
+
+*/
